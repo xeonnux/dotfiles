@@ -11,7 +11,6 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
   co = checkout
@@ -52,3 +51,12 @@
 [user]
 	email = stepwiseltd@gmail.com
 	name = fabrice madre
+[includeIf "gitdir:~/code/cloudsure/"]
+  path = ~/code/cloudsure/.gitconfig
+[includeIf "gitdir:~/code/cloudsure/github-pierre/"]
+  path = ~/code/cloudsure/github-pierre/.gitconfig
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
