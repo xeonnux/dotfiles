@@ -79,3 +79,4 @@ if [ -f '/Users/fabricemadre/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 if [ -f '/Users/fabricemadre/Tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fabricemadre/Tools/google-cloud-sdk/completion.zsh.inc'; fi
 
 export ANDROID_HOME=$HOME/Library/Android/sdk && export PATH=$PATH:$ANDROID_HOME/emulator && export PATH=$PATH:$ANDROID_HOME/platform-tools
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
